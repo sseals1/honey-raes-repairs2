@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react"
+import { useHistory } from "react-router-dom"
+
+
+
+
 
 export const EmployeeList = () => {
     //export function
@@ -6,6 +11,7 @@ export const EmployeeList = () => {
     //declaring a variable employee that will hold state. changeEmployee is like a setter function that will set state. useState sais what type of data state will be.
     const [employeeSpecialty, setSpecialties] = useState("")
 
+    const history = useHistory()
 
 
     useEffect(
@@ -41,9 +47,6 @@ export const EmployeeList = () => {
     return (
                 //render a Specialties heading with employeeSpecialty interpolated to render them to the DOM.
         <>
-            <div>
-                Specialties: {employeeSpecialty}
-            </div>
             {
                 employees.map(
                     (employee) => {
@@ -52,6 +55,14 @@ export const EmployeeList = () => {
                     }
                 )
             }
+            <div>
+                <h4>Specialties:</h4>{employeeSpecialty}
+                <button className="btn btn-primary" onClick={() => history.push("/employee/create")}>
+                <div>
+                    Finish Hiring
+                </div>
+            </button>
+            </div>
         </>
     )
 }

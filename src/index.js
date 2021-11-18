@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Repairs } from "./components/Repairs"
+import { Repairs } from "./components/Repairs" 
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'; //Import to enable browser routing
+//Wrap Repair component in BrowserRouter to enable browser routing. Adds functionality to load different views of the DOM
 
 ReactDOM.render(
   <React.StrictMode>
-    <Repairs />
+    <BrowserRouter>
+      <Repairs /> 
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
