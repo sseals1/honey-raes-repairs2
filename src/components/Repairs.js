@@ -5,6 +5,8 @@ import { NavBar } from "./nav/NavBar";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import "./Repairs.css";
+import { Employee } from "./Employee";
+
 
 
 export const Repairs = () => (
@@ -15,7 +17,11 @@ export const Repairs = () => (
           return (
             <>
               <NavBar />
+              
               <ApplicationViews />
+              
+              
+              
             </>
           );
         } else {

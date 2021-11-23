@@ -4,6 +4,9 @@ import "./NavBar.css"
 
 export const NavBar = (props) => {
     return (
+        <>
+        <div className="navbar_navbar">
+        <h1>Honey Rae's Repair Shop</h1>
         <ul className="navbar">
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/customers">Customers</Link>
@@ -31,5 +34,7 @@ export const NavBar = (props) => {
                 </Link>
             </li>
         </ul>
+        </div>
+    </>
     )
 }

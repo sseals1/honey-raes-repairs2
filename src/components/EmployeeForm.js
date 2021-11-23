@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
 import "./EmployeeForm.css"
 
@@ -13,7 +13,7 @@ export const EmployeeForm = () => {
 
 
     const saveEmployee = (event) => { //this is the object that is created that we want to sent to the API for permanent storage.
-        event.preventDefault()
+        event.preventDefault() 
         const newEmployee = { //declaration of the object that will hold the values of the ticket that we want to save to the API
             name: employee.name, //this is the description key that is declared on line 7. description is the key on serviceTickets in the API that
             //this is being set to ticket.description. ticket holds the value of the array that is created in transient state.
